@@ -27,6 +27,7 @@ export default new Vuex.Store({
       console.log("fetchScores");
       axios.get('http://13.74.31.101/api/points')
       .then(function (response) {
+        console.log(`Points: ${JSON.stringify(response.data.points)}  `)
         commit('UPDATE_BSCORES', response.data.points)
         commit('UPDATE_BTOKEN', response.data.token)
 
