@@ -1,5 +1,10 @@
 # vue_bowling
 
+## Case link
+```
+https://github.com/skat/bowling-opgave
+```
+
 ## Project setup
 ```
 npm install
