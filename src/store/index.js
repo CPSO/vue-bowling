@@ -9,7 +9,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     bpoints: [],
-    btoken: ''
+    btoken: '',
+    bscore: []
   },
   mutations: {
     UPDATE_BSCORES(state, payload) {
@@ -20,6 +21,10 @@ export default new Vuex.Store({
     UPDATE_BTOKEN(state, payload) {
       state.btoken = payload
       console.log("UPDATE BTOKEN")
+    },
+    UPDATE_BSCORE(state, payload) {
+      state.bscore = payload
+      console.log("UPDATE BSCORE")
     }
   },
   actions: {
@@ -35,11 +40,25 @@ export default new Vuex.Store({
       .catch(function (error) {
           console.log(error);
       });
+    },
+    postScore(){
+      console.log('post scores')
+      axios.post('http://13.74.31.101/api/points',{
+        token: this.getters.getBToken,
+        points: this.getters.getBScore
+      })
+      .then((response) => {
+        console.log(response);
+      }, (error) => {
+        console.log(error);
+      });
+      
     }
   },
   getters: {
     getBPoints: state => state.bpoints.join(' - '),
     getBPointsRaw: state => state.bpoints,
-    getBToken: state => state.btoken
+    getBToken: state => state.btoken,
+    getBScore: state => state.bscore
   }
 })

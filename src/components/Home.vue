@@ -11,7 +11,11 @@
         </div>
         <div>
             <h1>Score</h1>
-             
+            <p style="font-size: 2rem">{{showScore}}</p>  
+        </div>
+        <div>
+            <h1>Send score</h1>
+            <b-button squared size="lg" v-on:click="sendScore()">Send bowling score</b-button>
         </div>
 
 </div>
@@ -30,9 +34,16 @@ export default {
             console.log("getting bowling points")
             store.dispatch('fetchPoints')
         },
+        sendScore(){
+            console.log('Posting Scores')
+            store.dispatch('postScore')
+        }
     },computed: {
         showPoints() {
             return store.getters.getBPoints
+        },
+        showScore() {
+            return  store.getters.getBScore.join(' - ')  
         }
     }
 }
