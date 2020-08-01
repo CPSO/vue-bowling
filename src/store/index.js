@@ -57,8 +57,8 @@ export default new Vuex.Store({
         console.log(response);
         commit('UPDATE_RESPONSE', {'success': response.data.success,'status':response.status})
       }, (error) => {
-        console.log(error);
-        commit('UPDATE_RESPONSE', {'success': error,'status':error})
+        console.log(error.response.data)
+        commit('UPDATE_RESPONSE', {'success': error.response.data,'status':error.response.status})
 
       });
       

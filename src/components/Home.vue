@@ -19,7 +19,9 @@
         </div>
         <div class="text-center" >
             <b-spinner v-if="postScorePressed" class="m-3" label="Loading..."></b-spinner>
-            <p v-if="showResponse.success" class="m-3" style="font-size: 2rem">Score posted with code: {{showResponse.status}} , and sucsess: {{showResponse.success}}  </p>
+            <p v-if="showResponse.status == '200'" class="m-3" style="font-size: 2rem">Score posted with code: {{showResponse.status}} , and sucsess: {{showResponse.success}} <b-icon icon="check-circle-fill" variant="success"></b-icon> </p>
+            <p v-else-if="showResponse.status == '400'" class="m-3" style="font-size: 2rem"> ERROR Failed to post with code: {{showResponse.status}} , reason: {{showResponse.success}} <b-icon icon="exclamation-circle-fill" variant="danger"></b-icon> </p>
+
 
         </div>
 
