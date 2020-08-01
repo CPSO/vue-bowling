@@ -10,17 +10,7 @@ const localVue = createLocalVue()
 // install plugins as normal
 localVue.use(BootstrapVue)
 
-
-
-/* describe('Home.vue', () => {
-  test('Check if button renders', () => {
-    const wrapper = mount(Home)
-    expect(wrapper.text()).toContain('counter: 0')
-    wrapper.find('b-button').trigger('click')
-  })
-}); */
-
-describe('Home.vue', () => {
+describe('Check for home render', () => {
     test('Check if home renders', () => {
         const wrapper = mount(Home,{localVue})
         expect(wrapper.exists()).toBe(true);

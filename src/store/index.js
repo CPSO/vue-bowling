@@ -10,7 +10,8 @@ export default new Vuex.Store({
   state: {
     bpoints: [],
     btoken: '',
-    bscore: []
+    bscore: [],
+    postSuccess: [{}]
   },
   mutations: {
     UPDATE_BSCORES(state, payload) {
@@ -25,6 +26,9 @@ export default new Vuex.Store({
     UPDATE_BSCORE(state, payload) {
       state.bscore = payload
       console.log("UPDATE BSCORE")
+    },
+    UPDATE_RESPONSE(state, payload) {
+      state.postSuccess = payload
     }
   },
   actions: {
@@ -35,13 +39,15 @@ export default new Vuex.Store({
         console.log(`Points: ${JSON.stringify(response.data.points)}  `)
         commit('UPDATE_BSCORES', response.data.points)
         commit('UPDATE_BTOKEN', response.data.token)
+        commit('UPDATE_RESPONSE', false)
+
 
       })
       .catch(function (error) {
           console.log(error);
       });
     },
-    postScore(){
+    postScore({commit}){
       console.log('post scores')
       axios.post('http://13.74.31.101/api/points',{
         token: this.getters.getBToken,
@@ -49,8 +55,11 @@ export default new Vuex.Store({
       })
       .then((response) => {
         console.log(response);
+        commit('UPDATE_RESPONSE', {'success': response.data.success,'status':response.status})
       }, (error) => {
         console.log(error);
+        commit('UPDATE_RESPONSE', {'success': error,'status':error})
+
       });
       
     }
@@ -59,6 +68,7 @@ export default new Vuex.Store({
     getBPoints: state => state.bpoints.join(' - '),
     getBPointsRaw: state => state.bpoints,
     getBToken: state => state.btoken,
-    getBScore: state => state.bscore
+    getBScore: state => state.bscore,
+    getSuccess: state => state.postSuccess
   }
 })
