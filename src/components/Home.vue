@@ -2,7 +2,7 @@
 <div>
     <h1>Bowling Scores</h1>
         <div>
-            <b-button squared size="lg" v-on:click="getPoints()">Get bowling points</b-button>
+            <b-button name="button" squared size="lg" v-on:click="getPoints()">Get bowling points</b-button>
         </div>
         <br>
         <div>
@@ -22,8 +22,7 @@
 </template>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import store from '../store'
 
 
