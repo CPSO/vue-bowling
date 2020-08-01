@@ -11,10 +11,6 @@ const localVue = createLocalVue()
 // install plugins as normal
 localVue.use(BootstrapVue)
 
-// pass the `localVue` to the mount options
-mount(Home, {
-  localVue
-})
 
 
 /* describe('Home.vue', () => {
