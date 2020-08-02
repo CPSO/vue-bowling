@@ -1,8 +1,8 @@
 # vue_bowling
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/b0.png" width=15%></img>
+<img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/b3.png" width=15%></img>
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/b1.png" width=15%></img>
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/b2.png" width=15%></img>
-<img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/b3.png" width=15%></img>
 
 ## Case link
 ```
