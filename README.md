@@ -6,7 +6,7 @@ https://github.com/skat/bowling-opgave
 ```
 ## Node.js
 ```
-Programmet kræver npm/Node.js for at køre 
+Programmet kræver npm/Node.js for at køre https://nodejs.org/en/
 ```
 
 ## Project setup - First time setup - Kør dette når projektet skal køres første gang.
@@ -14,7 +14,7 @@ Programmet kræver npm/Node.js for at køre
 npm install
 ```
 
-### Compiles and hot-reloads for development - Kør dette for at compile projektet, giver et link til siden når den er kørt færdig.
+### Compiles and hot-reloads for development - Kør dette for at compile projektet, giver et link i terminalen til siden når den er kørt færdig.
 ```
 npm run serve
 ```
