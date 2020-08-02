@@ -23,7 +23,7 @@ Anbefaleder at bruge Visual Studio Code til at åbne projektet op og bruge termi
 npm install
 ```
 
-### Compile programmet - Kør dette for at compile projektet, giver et link i terminalen til siden når den er kørt færdig.
+### Compile projektet - Kør dette for at compile projektet, giver et url i terminalen til siden når den er kørt færdig.
 ```
 npm run serve
 ```
