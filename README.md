@@ -18,16 +18,16 @@ Programmet kræver npm/Node.js for at køre og hente nødvendige pakker https://
 Anbefaleder at bruge Visual Studio Code til at åbne projektet op og bruge terminalen der i
 ```
 
-## Project setup - First time setup - Kør dette når projektet skal køres første gang.
+## First time setup - Kør dette når projektet skal køres første gang.
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development - Kør dette for at compile projektet, giver et link i terminalen til siden når den er kørt færdig.
+### Compile programmet - Kør dette for at compile projektet, giver et link i terminalen til siden når den er kørt færdig.
 ```
 npm run serve
 ```
-### Project test - Køre test på bowling score algoritme
+### Test - Køre test på bowling score algoritme
 ```
 npm run test
 ```
