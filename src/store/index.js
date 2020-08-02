@@ -11,7 +11,7 @@ export default new Vuex.Store({
     bpoints: [],
     btoken: '',
     bscore: [],
-    postSuccess: [{}]
+    postSuccess: {}
   },
   mutations: {
     UPDATE_BSCORES(state, payload) {
@@ -40,8 +40,6 @@ export default new Vuex.Store({
         commit('UPDATE_BSCORES', response.data.points)
         commit('UPDATE_BTOKEN', response.data.token)
         commit('UPDATE_RESPONSE', false)
-
-
       })
       .catch(function (error) {
           console.log(error);
@@ -54,10 +52,10 @@ export default new Vuex.Store({
         points: this.getters.getBScore
       })
       .then((response) => {
-        console.log(response);
+        console.log(`Response status: ${response.status}, is successful: ${response.data.success}`);
         commit('UPDATE_RESPONSE', {'success': response.data.success,'status':response.status})
       }, (error) => {
-        console.log(error.response.data)
+        console.log(`Response status: ${error.response.status}, with error: ${error.response.data}`);
         commit('UPDATE_RESPONSE', {'success': error.response.data,'status':error.response.status})
 
       });

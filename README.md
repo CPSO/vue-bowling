@@ -4,9 +4,10 @@
 ```
 https://github.com/skat/bowling-opgave
 ```
-## Node.js
+## Node.js & Visual Studio Code
 ```
-Programmet kræver npm/Node.js for at køre https://nodejs.org/en/
+Programmet kræver npm/Node.js for at køre og hente nødvendige pakker https://nodejs.org/en/
+Anbefaleder at bruge Visual Studio Code til at åbne projektet op og bruge terminalen der i
 ```
 
 ## Project setup - First time setup - Kør dette når projektet skal køres første gang.
