@@ -3,6 +3,9 @@
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/img1.png" width="35%"></img>
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/img2.png" width="35%"></img>
 <img src="https://github.com/CPSO/vue-bowling/blob/master/wiki/img3.png" width="35%"></img>
+```
+Klik på hent bowling points for at hente data fra api. Scoren bliver derefter udregnet og vist på siden. Klik så på Send bowling score og den udregnet score bliver sendt og man vil modtage et svar om det er accepteret
+```
 
 ## Case link
 ```
