@@ -5,20 +5,13 @@ const pc = new class PC {
 
     calcPoints(){
         let points = store.getters.getBPointsRaw
-        //points = [[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,10]]
-        //points = [[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[10,0],[7,3],[10,10]]
-       //const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
         //Contains the type of points. 0 = regular points, 1 = spare, 2 = strike
         let pointType = []
         let totalScore = []
 
-        
-
         // Walk though the recived points
         for (let index = 0; index < points.length; index++) {
-            //const element = points[index];
-           // console.log(`Element: ${element.toString()}`)
             console.log(`First point Value: ${points[index][0]}`)
             if ( points[index][0] == 10 ){
               // We have a strike
@@ -39,7 +32,6 @@ const pc = new class PC {
           const length = pointType.length - 1 
 
           for (let index = 0; index < pointType.length && index < 10; index++) {
-            
             console.log(`Foreach on point ${pointType[index]}`)
             let score
             console.log(`length: ${length} and index: ${index}`)
@@ -80,15 +72,11 @@ const pc = new class PC {
                 }
                 else if (index == length) {
                   // Special case, since last entry
-                  
                     score = points[index][0] + points[index][1]
-                  
-
                 } else if ( index == length -1)
                 {
                   score = 10 + points[index + 1][0] + points[index + 1][1]
                 }
-                
                 else {
                   //checks if the next round is a strike
                   if (pointType[index + 1] == 2) {
@@ -96,15 +84,12 @@ const pc = new class PC {
                       score = 20 + points[index + 1][1]
                     } else {
                       score = 20 + points[index + 2][0]
-                    }
-                      
+                    } 
                   } else {
                     //takes the points of the next round
                     score = 10 + points[index + 1][0] + points[index + 1][1]
                   }
                 }
-
-
                 if (index == 0) {
                   totalScore.push(score)
                 } else {
@@ -115,10 +100,6 @@ const pc = new class PC {
                 break;
             }
           }
-
-
-
-
           console.log(`Point Types: ${JSON.stringify( pointType )}`)
           console.log(`Points: ${JSON.stringify( points )}`)
           console.log(`Score: ${JSON.stringify( totalScore )}`)

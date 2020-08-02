@@ -25,12 +25,9 @@
 
 </div>
 </template>
-
 <script>
 
 import store from '../store'
-
-
 export default {
     name: 'Home',
     data: function () {
@@ -73,5 +70,4 @@ export default {
 </script>
 
 <style>
-
 </style>
