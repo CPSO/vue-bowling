@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { BootstrapVue} from 'bootstrap-vue'
 import { createLocalVue } from '@vue/test-utils'
-import Home from '@/components/home.vue'
+import Home from '@/components/Home.vue'
 import store from '@/store/index.js'
 
 // create an extended `Vue` constructor
